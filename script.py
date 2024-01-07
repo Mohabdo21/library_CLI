@@ -7,7 +7,7 @@ the Biology, Economy, and History sections.
 
 import cmd
 
-from library import Biology, Economy, History
+from library.library import Biology, Economy, History
 
 
 class LibraryShell(cmd.Cmd):
@@ -49,7 +49,6 @@ class LibraryShell(cmd.Cmd):
         if section is None:
             return
 
-        section.load_books()
         section.add_book()
 
     def do_lookup(self, arg):
@@ -72,7 +71,6 @@ class LibraryShell(cmd.Cmd):
         section = self.get_section(arg)
         if section is None:
             return
-        section.load_books()
         section.display_books()
 
     def do_exit(self, _):

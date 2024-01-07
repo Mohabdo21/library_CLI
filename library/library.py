@@ -2,7 +2,8 @@
 This module defines a Library class and several subclasses for different sections of a library.
 Each class provides methods for managing books in that section.
 """
-import json
+
+from file_man.file_man import FileManager
 
 
 class Library:
@@ -10,30 +11,9 @@ class Library:
 
     def __init__(self, filename):
         """Initialize an empty library."""
-        self.books = []
-        self.counter = 0
-        self.filename = filename
-
-    def load_books(self):
-        """Load books from a file."""
-        try:
-            with open(self.filename, "r", encoding="utf-8") as infile:
-                try:
-                    self.books = json.load(infile)
-                except json.JSONDecodeError:
-                    print(
-                        f"The file {self.filename} is empty or does not contain valid JSON."
-                    )
-                    self.books = []
-                self.counter = len(self.books)
-        except FileNotFoundError:
-            print(f"The file {self.filename} is not found")
-            print("Starting a New Book List")
-
-    def save_books(self):
-        """Save books to a file."""
-        with open(self.filename, "w", encoding="utf-8") as outfile:
-            json.dump(self.books, outfile)
+        self.file_manager = FileManager(filename)
+        self.books = self.file_manager.load_data()
+        self.counter = len(self.books)
 
     def add_book(self):
         """Add Book to the library."""
@@ -49,7 +29,7 @@ class Library:
             {"name": book_name, "author": author_name, "pages": number_of_pages}
         )
         self.counter += 1
-        self.save_books()
+        self.file_manager.save_data(self.books)
 
     def lookup_book(self):
         """Search for a Book in the library."""
@@ -62,10 +42,11 @@ class Library:
                 print(f"Author Name: {book['author']}")
                 print(f"Number of Pages: {book['pages']}\n")
                 found = True
-            if not found:
-                print(
-                    f"The Book is Not Found in The Section {self.__class__.__name__}."
-                )
+        if not found:
+            print(
+                f"The Search Term: '{keyword}' is Not Found in The "
+                f"{self.__class__.__name__} Section."
+            )
 
     def display_books(self):
         """Display all Books in The library"""
@@ -86,7 +67,6 @@ class Biology(Library):
 
     def __init__(self):
         super().__init__("biologyBookList.txt")
-        self.load_books()
 
 
 class Economy(Library):
@@ -94,7 +74,6 @@ class Economy(Library):
 
     def __init__(self):
         super().__init__("economyBookList.txt")
-        self.load_books()
 
 
 class History(Library):
@@ -102,4 +81,3 @@ class History(Library):
 
     def __init__(self):
         super().__init__("historyBookList.txt")
-        self.load_books()
