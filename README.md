@@ -8,7 +8,7 @@ The project consists of two main Python files:
 
 1. `library.py`: This module defines a `Library` class and several subclasses for different sections of a library. Each class provides methods for managing books in that section.
 
-2. `main.py`: This script provides an interactive shell for managing different sections of a library. It allows the user to add, lookup, and display books in the Biology, Economy, and History sections.
+2. `script.py`: This script provides an interactive shell for managing different sections of a library. It allows the user to add, lookup, and display books in the Biology, Economy, and History sections.
 
 ## Classes
 
@@ -37,7 +37,7 @@ The `LibraryShell` class provides an interactive shell for managing different se
 
 ## Usage
 
-To start the interactive shell, run the `main.py` script:
+To start the interactive shell, run the `script.py` script:
 
 ```
 bash
