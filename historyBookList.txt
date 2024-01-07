@@ -1,0 +1,62 @@
+[
+    {
+        "id": "0600-070124-0920",
+        "name": "Guns, Germs, and Steel",
+        "author": "Jared Diamond",
+        "pages": "480"
+    },
+    {
+        "id": "0600-070124-0921",
+        "name": "A People's History of the United States",
+        "author": "Howard Zinn",
+        "pages": "729"
+    },
+    {
+        "id": "0600-070124-0922",
+        "name": "The History of the Decline and Fall of the Roman Empire",
+        "author": "Edward Gibbon",
+        "pages": "1312"
+    },
+    {
+        "id": "0600-070124-0923",
+        "name": "The Diary of a Young Girl",
+        "author": "Anne Frank",
+        "pages": "283"
+    },
+    {
+        "id": "0600-070124-0924",
+        "name": "The Rise and Fall of the Third Reich",
+        "author": "William L. Shirer",
+        "pages": "1614"
+    },
+    {
+        "id": "0600-070124-0925",
+        "name": "The Histories",
+        "author": "Herodotus",
+        "pages": "716"
+    },
+    {
+        "id": "0600-070124-0926",
+        "name": "The Making of the Atomic Bomb",
+        "author": "Richard Rhodes",
+        "pages": "886"
+    },
+    {
+        "id": "0600-070124-0927",
+        "name": "The Swerve: How the World Became Modern",
+        "author": "Stephen Greenblatt",
+        "pages": "368"
+    },
+    {
+        "id": "0600-070124-0928",
+        "name": "The Guns of August",
+        "author": "Barbara W. Tuchman",
+        "pages": "606"
+    },
+    {
+        "id": "0600-070124-0929",
+        "name": "The Discoverers",
+        "author": "Daniel J. Boorstin",
+        "pages": "745"
+    }
+]

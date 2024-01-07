@@ -73,6 +73,11 @@ class LibraryShell(cmd.Cmd):
             return
         section.display_books()
 
+    def do_display_all(self, arg):
+        """Display all Books in the library"""
+        for section_name, section in self.sections.items():
+            section.display_books()
+
     def do_exit(self, _):
         """Exit the Program."""
         print("Thank you For using library. Good Bye!")
@@ -113,6 +118,17 @@ class LibraryShell(cmd.Cmd):
                     "Usage: display SECTION",
                     "Example: display economy",
                     "Display all Available Books in the Selected Section.",
+                ]
+            )
+        )
+
+    def help_display_all(self):
+        """Print the help message for the display_all command"""
+        print(
+            "\n".join(
+                [
+                    "Display All Available Books in The Library.",
+                    "Usage: display_all",
                 ]
             )
         )

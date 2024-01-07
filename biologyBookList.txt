@@ -1,0 +1,62 @@
+[
+    {
+        "id": "0400-070124-0900",
+        "name": "The Selfish Gene",
+        "author": "Richard Dawkins",
+        "pages": "360"
+    },
+    {
+        "id": "0400-070124-0901",
+        "name": "The Origin of Species",
+        "author": "Charles Darwin",
+        "pages": "703"
+    },
+    {
+        "id": "0400-070124-0902",
+        "name": "The Gene: An Intimate History",
+        "author": "Siddhartha Mukherjee",
+        "pages": "592"
+    },
+    {
+        "id": "0400-070124-0903",
+        "name": "The Immortal Life of Henrietta Lacks",
+        "author": "Rebecca Skloot",
+        "pages": "370"
+    },
+    {
+        "id": "0400-070124-0904",
+        "name": "The Emperor of All Maladies: A Biography of Cancer",
+        "author": "Siddhartha Mukherjee",
+        "pages": "571"
+    },
+    {
+        "id": "0400-070124-0905",
+        "name": "The Man Who Knew Infinity",
+        "author": "Robert Kanigel",
+        "pages": "464"
+    },
+    {
+        "id": "0400-070124-0906",
+        "name": "The Double Helix",
+        "author": "James D. Watson",
+        "pages": "256"
+    },
+    {
+        "id": "0400-070124-0907",
+        "name": "The Sixth Extinction: An Unnatural History",
+        "author": "Elizabeth Kolbert",
+        "pages": "336"
+    },
+    {
+        "id": "0400-070124-0908",
+        "name": "The Vital Question",
+        "author": "Nick Lane",
+        "pages": "368"
+    },
+    {
+        "id": "0400-070124-0909",
+        "name": "The Blind Watchmaker",
+        "author": "Richard Dawkins",
+        "pages": "496"
+    }
+]

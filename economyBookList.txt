@@ -1,0 +1,62 @@
+[
+    {
+        "id": "0500-070124-0910",
+        "name": "Capital in the Twenty-First Century",
+        "author": "Thomas Piketty",
+        "pages": "816"
+    },
+    {
+        "id": "0500-070124-0911",
+        "name": "The Wealth of Nations",
+        "author": "Adam Smith",
+        "pages": "590"
+    },
+    {
+        "id": "0500-070124-0912",
+        "name": "Freakonomics",
+        "author": "Steven D. Levitt and Stephen J. Dubner",
+        "pages": "336"
+    },
+    {
+        "id": "0500-070124-0913",
+        "name": "The Great Transformation",
+        "author": "Karl Polanyi",
+        "pages": "360"
+    },
+    {
+        "id": "0500-070124-0914",
+        "name": "The Affluent Society",
+        "author": "John Kenneth Galbraith",
+        "pages": "288"
+    },
+    {
+        "id": "0500-070124-0915",
+        "name": "Thinking, Fast and Slow",
+        "author": "Daniel Kahneman",
+        "pages": "499"
+    },
+    {
+        "id": "0500-070124-0916",
+        "name": "The Road to Serfdom",
+        "author": "Friedrich Hayek",
+        "pages": "274"
+    },
+    {
+        "id": "0500-070124-0917",
+        "name": "The Theory of the Leisure Class",
+        "author": "Thorstein Veblen",
+        "pages": "400"
+    },
+    {
+        "id": "0500-070124-0918",
+        "name": "The General Theory of Employment, Interest and Money",
+        "author": "John Maynard Keynes",
+        "pages": "403"
+    },
+    {
+        "id": "0500-070124-0919",
+        "name": "The Rise and Fall of American Growth",
+        "author": "Robert J. Gordon",
+        "pages": "784"
+    }
+]

@@ -29,4 +29,4 @@ class FileManager:
     def save_data(self, data):
         """Save data to a file."""
         with open(self.filename, "w", encoding="utf-8") as outfile:
-            json.dump(data, outfile)
+            json.dump(data, outfile, indent=4)
