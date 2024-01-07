@@ -6,6 +6,7 @@ the Biology, Economy, and History sections.
 """
 
 import cmd
+import sys
 
 from library.library import Biology, Economy, History
 
@@ -73,17 +74,17 @@ class LibraryShell(cmd.Cmd):
             return
         section.display_books()
 
-    def do_display_all(self, arg):
+    def do_display_all(self, _):
         """Display all Books in the library"""
-        for section_name, section in self.sections.items():
+        for _, section in self.sections.items():
             section.display_books()
 
-    def do_exit(self, _):
+    def do_exit(self, _):  # pylint: disable=no-self-use
         """Exit the Program."""
         print("Thank you For using library. Good Bye!")
         return True
 
-    def help_add(self):
+    def help_add(self):  # pylint: disable=no-self-use
         """Print the help message for the add command."""
         print(
             "\n".join(
@@ -96,7 +97,7 @@ class LibraryShell(cmd.Cmd):
             )
         )
 
-    def help_lookup(self):
+    def help_lookup(self):  # pylint: disable=no-self-use
         """Print the help message for the lookup command."""
         print(
             "\n".join(
@@ -109,7 +110,7 @@ class LibraryShell(cmd.Cmd):
             )
         )
 
-    def help_display(self):
+    def help_display(self):  # pylint: disable=no-self-use
         """Print the help message for the display command."""
         print(
             "\n".join(
@@ -122,7 +123,7 @@ class LibraryShell(cmd.Cmd):
             )
         )
 
-    def help_display_all(self):
+    def help_display_all(self):  # pylint: disable=no-self-use
         """Print the help message for the display_all command"""
         print(
             "\n".join(
@@ -133,7 +134,7 @@ class LibraryShell(cmd.Cmd):
             )
         )
 
-    def help_exit(self):
+    def help_exit(self):  # pylint: disable=no-self-use
         """Print the help message for the exit command."""
         print(
             "\n".join(
@@ -146,4 +147,12 @@ class LibraryShell(cmd.Cmd):
 
 
 if __name__ == "__main__":
-    LibraryShell().cmdloop()
+    shell = LibraryShell()
+    if len(sys.argv) > 1:  # Non-interactive mode
+        args = sys.argv[1:]
+        while args:
+            command = args.pop(0)
+            argu = args.pop(0) if args else ""  # pylint: disable=invalid-name
+            shell.onecmd(command + " " + argu)
+    else:  # Interactive mode
+        shell.cmdloop()

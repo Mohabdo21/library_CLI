@@ -71,7 +71,9 @@ class Library:
             print(f"No Books in The {self.__class__.__name__} Section.\n")
             return
 
-        print(f"Displaying All Books in The {self.__class__.__name__} Section ...")
+        print(
+            f"    *** Displaying All Books in The {self.__class__.__name__} Section ***    "
+        )
         for i, book in enumerate(self.books, start=1):
             print(f"Book no ({i}):")
             print(f"Book ID {book['id']}")
