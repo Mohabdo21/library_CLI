@@ -44,6 +44,8 @@ bash
 ./script.py
 ```
 
+Then, you can use the add, lookup, display, and exit commands to manage the library.
+Use `help` or `?` with command name to know more about the command.
 
 ```
 $ ./script.py
