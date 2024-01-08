@@ -148,11 +148,7 @@ class LibraryShell(cmd.Cmd):
 
 if __name__ == "__main__":
     shell = LibraryShell()
-    if len(sys.argv) > 1:  # Non-interactive mode
-        args = sys.argv[1:]
-        while args:
-            command = args.pop(0)
-            argu = args.pop(0) if args else ""  # pylint: disable=invalid-name
-            shell.onecmd(command + " " + argu)
-    else:  # Interactive mode
+    if len(sys.argv) < 2:  # Interactive Mode
         shell.cmdloop()
+    else:  # Non-interavtive Mode
+        shell.onecmd(" ".join(sys.argv[1:]))
