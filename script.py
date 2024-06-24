@@ -8,6 +8,7 @@ and History sections.
 
 import cmd
 import sys
+import os
 
 from library.library import Biology, Economy, History
 
@@ -60,6 +61,10 @@ class LibraryShell(cmd.Cmd):
         for section in self.sections.values():
             section.display_books()
 
+    def do_clear(self, _):
+        """Clear the terminal."""
+        os.system('cls' if os.name == 'nt' else 'clear')
+
     def do_exit(self, _):
         """Exit the program."""
         print("Thank you for using the library. Goodbye!")
@@ -111,6 +116,10 @@ class LibraryShell(cmd.Cmd):
                 ["Display all available books in the library.", "Usage: display_all"]
             )
         )
+
+    def help_clear(self):
+        """Print the help message for the clear command."""
+        print("\n".join(["Clear the terminal output.", "Usage: clear"]))
 
     def help_exit(self):
         """Print the help message for the exit command."""
