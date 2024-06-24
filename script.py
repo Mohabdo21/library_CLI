@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """
-This script provides an interactive shell for managing different sections of a library.
-It allows the user to add, lookup, and display books in the Biology, Economy, and History sections.
+This script provides an interactive shell for managing different sections of
+a library.
+It allows the user to add, lookup, and display books in the Biology, Economy,
+and History sections.
 """
 
 import cmd
